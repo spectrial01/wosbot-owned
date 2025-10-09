@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import cl.camodev.wosbot.common.view.PriorityListView?>
+
+
+<VBox xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+      spacing="15">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Alliance Shop Configuration" style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+
+    <Separator/>
+
+    <CheckBox fx:id="enableAllianceShopCheckbox" text="Enable Alliance Shop purchases"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Minimum Alliance Coins to Activate:"/>
+        <TextField fx:id="minCoinsToActivateTextField" prefWidth="100" promptText="0"/>
+        <Label text="coins" style="-fx-text-fill: #888;"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Minimum Alliance Coins to Save:"/>
+        <TextField fx:id="minCoinsTextField" prefWidth="100" promptText="0"/>
+        <Label text="coins" style="-fx-text-fill: #888;"/>
+    </HBox>
+
+    <Label fx:id="instructionsLabel" wrapText="true"
+           text="Define the priority order for purchases. Items with priority 1 will be purchased first. You can drag items to reorder or use the buttons. The minimum coins setting acts as a trigger - when Alliance Tech task runs and detects you have at least this amount, it will automatically schedule the Alliance Shop purchase task during bot execution."
+           style="-fx-text-fill: #666; -fx-font-size: 11px;"/>
+
+    <VBox spacing="5">
+        <Label text="Purchase Priorities:" style="-fx-font-weight: bold;"/>
+        <PriorityListView fx:id="allianceShopPriorities"
+                          prefHeight="250"/>
+    </VBox>
+
+</VBox>

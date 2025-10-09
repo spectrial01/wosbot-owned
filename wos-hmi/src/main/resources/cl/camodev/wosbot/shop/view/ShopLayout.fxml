@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="306.0" prefWidth="580.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+      <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="33.33333333333333" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="33.33333333333333" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="1.7976931348623157E308" percentHeight="33.33333333333333" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <CheckBox fx:id="checkBoxNomadicMerchant" graphicTextGap="3.0" mnemonicParsing="false" text="Buy nomadic merchant resources">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </CheckBox>
+      <CheckBox fx:id="checkBoxNomadicMerchantVip" graphicTextGap="3.0" mnemonicParsing="false" text="Buy vip points on nomadic merchant" GridPane.columnIndex="1">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </CheckBox>
+      <CheckBox fx:id="checkBoxBank" graphicTextGap="3.0" mnemonicParsing="false" text="Enable Bank task" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </CheckBox>
+      <HBox alignment="CENTER_LEFT" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <Label fx:id="labelPeriod" text="Period:" />
+            <ComboBox fx:id="comboBoxBankDelay" prefWidth="100.0" promptText="Bank delay" />
+         </children>
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </HBox>
+      <CheckBox fx:id="checkBoxMysteryShop" graphicTextGap="3.0" mnemonicParsing="false" text="Enable Mystery Shop task" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets />
+         </GridPane.margin>
+      </CheckBox>
+      <CheckBox fx:id="checkBoxMysteryShop50DiscountGear" mnemonicParsing="false" text="Buy 50% discounted hero gear (250 badges)" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+   </children>
+</GridPane>
